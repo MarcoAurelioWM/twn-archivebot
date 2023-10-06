@@ -1,14 +1,14 @@
 # Task Scheduler for User:ArchiveBot on translatewiki.net
 ---
 - name: archive
-  image: python3.9
+  image: python3.11
   command: ./bot/src/archive.sh
   filelog-stdout: logs/archive.log
   filelog-stderr: logs/archive.log
-  schedule: "15 06 * * *"
+  schedule: "@daily"
   emails: onfailure
 - name: clear-cache
-  image: python3.9
+  image: python3.11
   command: ./bot/src/clear-cache.sh
   filelog-stderr: logs/cache.log
   filelog-stdout: logs/cache.log
