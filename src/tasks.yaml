@@ -14,3 +14,11 @@
   filelog-stdout: logs/cache.log
   schedule: "45 23 * * *"
   emails: onfailure
+- name: logrotate
+  image: mariadb
+  command: ./bot/src/logrotate.sh
+  filelog-stderr: logs/logrotate.log
+  filelog-stdout: logs/logrotate.log
+  schedule: '@weekly'
+  emails: onfailure
+  
