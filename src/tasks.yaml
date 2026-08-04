@@ -21,10 +21,3 @@
   filelog-stdout: logs/logrotate.log
   schedule: "@weekly"
   emails: onfailure
-- name: login
-  image: python3.13
-  command: ./bot/src/login.sh
-  filelog-stderr: logs/login.log
-  filelog-stdout: logs/login.log
-  schedule: "50 23 * * *"
-  emails: onfailure
