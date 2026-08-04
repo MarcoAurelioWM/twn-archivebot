@@ -21,7 +21,7 @@
   filelog-stdout: logs/logrotate.log
   schedule: "@weekly"
   emails: onfailure
-  - name: logout
+- name: logout
   image: python3.13
   command: ./bot/src/logout.sh
   filelog-stderr: logs/logout.log
