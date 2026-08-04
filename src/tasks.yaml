@@ -19,6 +19,12 @@
   command: ./bot/src/logrotate.sh
   filelog-stderr: logs/logrotate.log
   filelog-stdout: logs/logrotate.log
-  schedule: '@weekly'
+  schedule: "@weekly"
   emails: onfailure
-  
+  - name: logout
+  image: python3.13
+  command: ./bot/src/logout.sh
+  filelog-stderr: logs/logout.log
+  filelog-stdout: logs/logout.log
+  schedule: "50 23 * * *"
+  emails: onfailure
